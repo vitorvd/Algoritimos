@@ -1,0 +1,62 @@
+algoritmo exercicio07;
+// Síntese
+//  Objetivo: Calcular o salário do trabalhador baseado em horas trabalhadas x valor da hora, onde é informado o nome completo, matrícula e sexo.
+//  Entrada : Nome completo, matrícula, sexo, horas trabalhadas e valor da hora de trabalho
+//  Saída   : Nome completo, matrícula, sexo e salário do funcionário.
+
+
+principal
+
+	texto nomeCompleto;
+	inteiro matricula;
+	texto sexo;
+	real horasTrabalhadas,valorHora, salario;
+	logico validacao;
+
+	escreval("Digite o nome do funcionário: ");
+	leia(nomeCompleto);
+
+	escreval("Digite a matrícula do funcionário: ");
+	leia(matricula);
+
+	validacao = falso;
+	
+	enquanto(!validacao) faca
+		escreval("Digite o sexo do funcionário: ");
+		leia(sexo);
+
+		se(comparaTexto(sexo,"M") == 0) entao
+			validacao = verdadeiro;
+		senao
+			se(comparaTexto(sexo,"m") == 0) entao
+				validacao = verdadeiro;
+			senao
+				se(comparaTexto(sexo,"F") == 0) entao
+					validacao = verdadeiro;
+				senao
+					se(comparaTexto(sexo,"f") == 0) entao
+						validacao = verdadeiro;
+					fimSe
+				fimSe
+			fimSe
+		fimSe
+
+		se (!validacao) entao
+			escreval("Ops... sintaxe incorreta, use: M (masculino) ou F (feminino).");
+		fimSe
+	fimEnquanto
+
+	escreval("Qual o número de horas trabalhadas do funcionário? ");
+	leia(horasTrabalhadas);
+	
+	escreval("Qual o valor, em reais, da hora de trabalho? ");
+	leia(valorHora);
+
+	salario = horasTrabalhadas * valorHora;
+	
+	escreval("Nome completo: " + nomeCompleto);
+	escreval("Matrícula: " + matricula);
+	escreval("Sexo: " + sexo);
+	escreval("Salário: R$ " + salario);
+
+fimPrincipal

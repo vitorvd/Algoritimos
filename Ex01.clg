@@ -1,0 +1,24 @@
+algoritmo exercise1;
+// Síntese
+//  Objetivo:  Informar a quantidade de minutos e/ou segundos que existem no horário informado.
+//  Entrada : Horário (apenas valores inteiros, aceitando apenas horas).
+//  Saída   : A respectiva quantidade de minutos e segundos na hora informada.
+
+
+principal
+
+//Definições de variáveis
+inteiro time, minutes, seconds;
+
+//Saída de dados e leitura de novos dados, respectivamente
+escreva("Digite as horas:");
+leia(time);
+
+//Atribuição de valores as váriaveis
+minutes = time * 60;
+seconds = minutes * 60;
+
+//Saída de dados
+escreva("A quantidade de minutos são: " + minutes + ". E a quantidade de segundos são: " + seconds);
+
+fimPrincipal
