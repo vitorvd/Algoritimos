@@ -1,2 +1,2 @@
-# Algoritimos
+# Algoritmos
 Repositório destinado ao aprendizado na disciplina "Algoritmos", da Católica.
