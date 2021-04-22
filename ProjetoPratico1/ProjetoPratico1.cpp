@@ -1,20 +1,20 @@
 //Nome Completo: Vitor Duda Versiani
-//MatrÌcula: UC21106822
-//Curso: CiÍncia da ComputaÁ„o
+//Matr√≠cula: UC21106822
+//Curso: Ci√™ncia da Computa√ß√£o
 
 //Importando as bibliotecas (libs)
-#include <stdio.h> //lib: importar funÁıes printf e scanf
+#include <stdio.h> //lib: importar fun√ß√µes printf e scanf
 #include <locale.h> //lib: formatar textos em utf-8
-#include <string.h> //lib: importar funÁıes para trabalhar com strings
-#include <stdlib.h> //lib: importar a funÁ„o de limpar a tela
-#include <ctype.h> //lib: importar funÁ„o toupper
+#include <string.h> //lib: importar fun√ß√µes para trabalhar com strings
+#include <stdlib.h> //lib: importar a fun√ß√£o de limpar a tela
+#include <ctype.h> //lib: importar fun√ß√£o toupper
 
 int main() {
-	setlocale(LC_ALL, "Portuguese"); //definiÁ„o da linguagem global do programa
+	setlocale(LC_ALL, "Portuguese"); //defini√ß√£o da linguagem global do programa
 	
 	/*
-		Aqui È realizado a criaÁ„o do "struct", semelhante ‡ um Objeto, na POO.
-		Onde o struct Pessoa possui trÍs vari·veis:
+		Aqui √© realizado a cria√ß√£o do "struct", semelhante √† um Objeto, na POO.
+		Onde o struct Pessoa possui tr√™s vari√°veis:
 		- nome, do tipo char[], que representa o nome da Pessoa;
 		- idade, do tipo int, que representa a idade da Pessoa;
 		- sexo, do tipo char, que representa o sexo da Pessoa.
@@ -25,92 +25,92 @@ int main() {
 		char sexo;
 	};
 	
-	int qntSessoesRealizadas = 0, pessoasAssistiramFilme = 0, pessoasMasculino = 0, pessoasFeminino = 0, maioresIdadeMasculino = 0, maioresIdadeFeminino = 0; //v·riaveis auxÌliares
-	int criancas = 0, adolescentes = 0, adultos = 0, idosos = 0; //vari·veis das classificaÁıes
-	char nomeFilme[40]; //vari·vel representativa do nome do filme
+	int qntSessoesRealizadas = 0, pessoasAssistiramFilme = 0, pessoasMasculino = 0, pessoasFeminino = 0, maioresIdadeMasculino = 0, maioresIdadeFeminino = 0; //v√°riaveis aux√≠liares
+	int criancas = 0, adolescentes = 0, adultos = 0, idosos = 0; //vari√°veis das classifica√ß√µes
+	char nomeFilme[40]; //vari√°vel representativa do nome do filme
 	
 	/*
-		o "do" e o "while" s„o estruturas de repetiÁ„o, onde ir· acontecer no minÌmo uma vez e sÛ ser· quebrado quando "qntSessoesRealizadas" for 2
-		o printf ir· mostrar a respectiva mensagem pro usu·rio;
-		o scanf ir· armazenar o que o usu·rio digitou na respectiva vari·vel;
-		o fflush(stdin) ir· retirar o lixo da memÛria.
+		o "do" e o "while" s√£o estruturas de repeti√ß√£o, onde ir√° acontecer no min√≠mo uma vez e s√≥ ser√° quebrado quando "qntSessoesRealizadas" for 2
+		o printf ir√° mostrar a respectiva mensagem pro usu√°rio;
+		o scanf ir√° armazenar o que o usu√°rio digitou na respectiva vari√°vel;
+		o fflush(stdin) ir√° retirar o lixo da mem√≥ria.
 	*/
 	do {
-		printf("Quantas sessıes ser„o realizadas? ");
+		printf("Quantas sess√µes ser√£o realizadas? ");
 		scanf("%d", &qntSessoesRealizadas); //tipo int
 		fflush(stdin);
 	} while(qntSessoesRealizadas != 2);
 	
 	/*
-		o "do" e o "while" s„o estruturas de repetiÁ„o, onde ir· acontecer no minÌmo uma vez e sÛ ser· quebrado quando a var "nomeFilme" n„o for nula
-		o printf ir· mostrar a respectiva mensagem pro usu·rio;
-		o fgets ir· armazenar o que o usu·rio digitou na respectiva vari·vel;
-		o fflush(stdin) ir· retirar o lixo da memÛria.
+		o "do" e o "while" s√£o estruturas de repeti√ß√£o, onde ir√° acontecer no min√≠mo uma vez e s√≥ ser√° quebrado quando a var "nomeFilme" n√£o for nula
+		o printf ir√° mostrar a respectiva mensagem pro usu√°rio;
+		o fgets ir√° armazenar o que o usu√°rio digitou na respectiva vari√°vel;
+		o fflush(stdin) ir√° retirar o lixo da mem√≥ria.
 	*/
 	do {
 		printf("Qual o nome do filme? ");
 		fgets(nomeFilme, 30, stdin);
 		fflush(stdin);
-		nomeFilme[strlen(nomeFilme) - 1] = '\0'; //remover o \n de uma possÌvel "entrada nula", e assim, respeitando a lÛgica do while
+		nomeFilme[strlen(nomeFilme) - 1] = '\0'; //remover o \n de uma poss√≠vel "entrada nula", e assim, respeitando a l√≥gica do while
 	} while(strlen(nomeFilme) == 0);
 	
 	/*
-		o "do" e o "while" s„o estruturas de repetiÁ„o, onde ir· acontecer no minÌmo uma vez e sÛ ser· quebrado quando a var "pessoasAssistiramFilme" for >= 10;
-		o printf ir· mostrar a respectiva mensagem pro usu·rio;
-		o scanf ir· armazenar o que o usu·rio digitou na respectiva vari·vel;
-		o fflush(stdin) ir· retirar o lixo da memÛria.
+		o "do" e o "while" s√£o estruturas de repeti√ß√£o, onde ir√° acontecer no min√≠mo uma vez e s√≥ ser√° quebrado quando a var "pessoasAssistiramFilme" for >= 10;
+		o printf ir√° mostrar a respectiva mensagem pro usu√°rio;
+		o scanf ir√° armazenar o que o usu√°rio digitou na respectiva vari√°vel;
+		o fflush(stdin) ir√° retirar o lixo da mem√≥ria.
 	*/
 	do {
 		printf("Quantas pessoas assistiram ao filme? ");
 		scanf("%d", &pessoasAssistiramFilme);
 		fflush(stdin);
-	} while(pessoasAssistiramFilme < 1);
+	} while(pessoasAssistiramFilme < 10);
 	
-	// criando a var que ir· representar cada Pessoa do ecossistema, onde Pessoa È um struct.
+	// criando a var que ir√° representar cada Pessoa do ecossistema, onde Pessoa √© um struct.
 	struct Pessoa pessoas[pessoasAssistiramFilme];
 	
-	// estrutura de repetiÁ„o que ir· realizar a quantidade de vezes que foi informado pelo usu·rio em "pessoasAssistiramFilme"
+	// estrutura de repeti√ß√£o que ir√° realizar a quantidade de vezes que foi informado pelo usu√°rio em "pessoasAssistiramFilme"
 	for(int i = 0; i < pessoasAssistiramFilme; i++) {
-		system("cls"); //limpa a tela do usu·rio, para melhor usuabilidade e um design mais clean
+		system("cls"); //limpa a tela do usu√°rio, para melhor usuabilidade e um design mais clean
 		
 		/*
-			o "do" e o "while" s„o estruturas de repetiÁ„o, onde ir· acontecer no minÌmo uma vez e sÛ ser· quebrado quando a var "pessoas[i].nome" n„o for nulo
-			o printf ir· mostrar a respectiva mensagem pro usu·rio;
-			o fgets ir· armazenar o que o usu·rio digitou na respectiva vari·vel;
-			o fflush(stdin) ir· retirar o lixo da memÛria.
-			**IMPORTANTE:** Essa È a nova funcionalidade pedida pela professora!
+			o "do" e o "while" s√£o estruturas de repeti√ß√£o, onde ir√° acontecer no min√≠mo uma vez e s√≥ ser√° quebrado quando a var "pessoas[i].nome" n√£o for nulo
+			o printf ir√° mostrar a respectiva mensagem pro usu√°rio;
+			o fgets ir√° armazenar o que o usu√°rio digitou na respectiva vari√°vel;
+			o fflush(stdin) ir√° retirar o lixo da mem√≥ria.
+			**IMPORTANTE:** Essa √© a nova funcionalidade pedida pela professora!
 		*/
 		do {
-			printf("Qual o nome da %d∫ pessoa? ", i + 1); // "i + 1" pq a contagem do "for" comeÁa no zero, portanto, para mostrar visualmente de forma correta, isso È necess·rio
+			printf("Qual o nome da %d¬∫ pessoa? ", i + 1); // "i + 1" pq a contagem do "for" come√ßa no zero, portanto, para mostrar visualmente de forma correta, isso √© necess√°rio
 			fgets(pessoas[i].nome, 30, stdin);
 			fflush(stdin);
-			pessoas[i].nome[strlen(pessoas[i].nome) - 1] = '\0'; //remover o \n de uma possÌvel "entrada nula", e assim, respeitando a lÛgica do while
+			pessoas[i].nome[strlen(pessoas[i].nome) - 1] = '\0'; //remover o \n de uma poss√≠vel "entrada nula", e assim, respeitando a l√≥gica do while
 		} while(strlen(pessoas[i].nome) == 0);
 		
 		/*
-			o "do" e o "while" s„o estruturas de repetiÁ„o, onde ir· acontecer no minÌmo uma vez e sÛ ser· quebrado quando a var "pessoas[i].sexo" for "M" ou "F";
-			o printf ir· mostrar a respectiva mensagem pro usu·rio;
-			o scanf ir· armazenar o que o usu·rio digitou na respectiva vari·vel;
-			o fflush(stdin) ir· retirar o lixo da memÛria.
+			o "do" e o "while" s√£o estruturas de repeti√ß√£o, onde ir√° acontecer no min√≠mo uma vez e s√≥ ser√° quebrado quando a var "pessoas[i].sexo" for "M" ou "F";
+			o printf ir√° mostrar a respectiva mensagem pro usu√°rio;
+			o scanf ir√° armazenar o que o usu√°rio digitou na respectiva vari√°vel;
+			o fflush(stdin) ir√° retirar o lixo da mem√≥ria.
 		*/
 		do {	
 			printf("Qual o sexo de %s? M = Masculino; F = Feminino: ", pessoas[i].nome);
 			scanf("%c", &pessoas[i].sexo);
-			pessoas[i].sexo = toupper(pessoas[i].sexo); //torno o que o usu·rio digitou mai˙sculo (lib ctype.h)
+			pessoas[i].sexo = toupper(pessoas[i].sexo); //torno o que o usu√°rio digitou mai√∫sculo (lib ctype.h)
 			fflush(stdin);
 		} while((pessoas[i].sexo != 'M') && (pessoas[i].sexo != 'F'));
 	
-		// lÛgica que È respons·vel por incrementar uma Pessoa na respectiva vari·vel, sempre relativa ao seu sexo.
+		// l√≥gica que √© respons√°vel por incrementar uma Pessoa na respectiva vari√°vel, sempre relativa ao seu sexo.
 		if(pessoas[i].sexo == 'M')
 			pessoasMasculino++;
 		else
 			pessoasFeminino++;
 	
 		/*
-			o "do" e o "while" s„o estruturas de repetiÁ„o, onde ir· acontecer no minÌmo uma vez e sÛ ser· quebrado quando a var "pessoas[i].idade" >= 3 && <= 100
-			o printf ir· mostrar a respectiva mensagem pro usu·rio;
-			o scanf ir· armazenar o que o usu·rio digitou na respectiva vari·vel;
-			o fflush(stdin) ir· retirar o lixo da memÛria.
+			o "do" e o "while" s√£o estruturas de repeti√ß√£o, onde ir√° acontecer no min√≠mo uma vez e s√≥ ser√° quebrado quando a var "pessoas[i].idade" >= 3 && <= 100
+			o printf ir√° mostrar a respectiva mensagem pro usu√°rio;
+			o scanf ir√° armazenar o que o usu√°rio digitou na respectiva vari√°vel;
+			o fflush(stdin) ir√° retirar o lixo da mem√≥ria.
 		*/
 		do {
 			printf("Qual a idade de %s? ", pessoas[i].nome);
@@ -119,39 +119,39 @@ int main() {
 		} while((pessoas[i].idade < 3) || (pessoas[i].idade > 100));
 		
 		/*
-			lÛgica que ir· dizer onde a Pessoa se encaixa de acordo com a classificaÁ„o fornecida na atividade.
-			as vars s„o incrementadas de acordo com a classificaÁ„o
+			l√≥gica que ir√° dizer onde a Pessoa se encaixa de acordo com a classifica√ß√£o fornecida na atividade.
+			as vars s√£o incrementadas de acordo com a classifica√ß√£o
 		*/
-		if((pessoas[i].idade >= 3) && (pessoas[i].idade <= 13)) // de 3 atÈ 13 anos - CrianÁas
+		if((pessoas[i].idade >= 3) && (pessoas[i].idade <= 13)) // de 3 at√© 13 anos - Crian√ßas
 			criancas++;
-		else if((pessoas[i].idade >= 14) && (pessoas[i].idade <= 17)) // de 14 atÈ 17 anos - Adolescentes
+		else if((pessoas[i].idade >= 14) && (pessoas[i].idade <= 17)) // de 14 at√© 17 anos - Adolescentes
 			adolescentes++;
-		else if((pessoas[i].idade >= 18) && (pessoas[i].idade <= 64)) // de 18 atÈ 64 anos - Adultos
+		else if((pessoas[i].idade >= 18) && (pessoas[i].idade <= 64)) // de 18 at√© 64 anos - Adultos
 			adultos++;
-		else // de 65 atÈ 100 anos - Idosos
+		else // de 65 at√© 100 anos - Idosos
 			idosos++;
 	}
 	
-	system("cls"); //limpa a tela do usu·rio, para melhor usuabilidade e um design mais clean
+	system("cls"); //limpa a tela do usu√°rio, para melhor usuabilidade e um design mais clean
 	
 	/*
-		Aqui ser· exibido o relatÛrio final pro usu·rio, apÛs todas as perguntas.
-		Onde ser· infomado:
+		Aqui ser√° exibido o relat√≥rio final pro usu√°rio, ap√≥s todas as perguntas.
+		Onde ser√° infomado:
 			- o nome do filme, a quantidade de pessoas do sexo feminino e a quantidade de pessoas do sexo masculino que assistiram ao filme
-			- a quantidade de pessoas, seguindo a classificaÁ„o da tabela
+			- a quantidade de pessoas, seguindo a classifica√ß√£o da tabela
 	*/
 	printf("========================\n\n");
 	printf("O filme assistido foi: %s, com %d espectadores.\n", nomeFilme, pessoasAssistiramFilme);
 	printf("%d homens e %d mulheres assistiram ao filme.\n\n", pessoasMasculino, pessoasFeminino);
-	printf("%d CrianÁas (3 ‡ 13 anos)\n", criancas);
-	printf("%d Adolescentes (14 ‡ 17 anos)\n", adolescentes);
-	printf("%d Adultos (18 ‡ 64 anos)\n", adultos);
-	printf("%d Idosos (65 ‡ 100 anos)\n\n", idosos);
+	printf("%d Crian√ßas (3 √† 13 anos)\n", criancas);
+	printf("%d Adolescentes (14 √† 17 anos)\n", adolescentes);
+	printf("%d Adultos (18 √† 64 anos)\n", adultos);
+	printf("%d Idosos (65 √† 100 anos)\n\n", idosos);
 	
-	// estrutura de repetiÁ„o para separar os maiores de idade
+	// estrutura de repeti√ß√£o para separar os maiores de idade
 	for(int i = 0; i < pessoasAssistiramFilme; i++) {
-		if(pessoas[i].idade >= 18){ // checando se È maior de idade (adulto)
-			switch(pessoas[i].sexo){ //lÛgica que separa de acordo com o sexo
+		if(pessoas[i].idade >= 18){ // checando se √© maior de idade (adulto)
+			switch(pessoas[i].sexo){ //l√≥gica que separa de acordo com o sexo
 				case 'M':
 					maioresIdadeMasculino++; //incrementa
 					break; // quebra o "switch"
@@ -159,15 +159,15 @@ int main() {
 					maioresIdadeFeminino++; //incrementa
 					break; // quebra o "switch"
 				default: // valor desconhecido
-					printf("** SEXO N√O INFORMADO **");
+					printf("** SEXO N√ÉO INFORMADO **");
 			}
 		}
 	}
 	
-	// restante do relatÛrio
+	// restante do relat√≥rio
 	printf("%d Homens maiores de idade assistiram ao filme %s.\n", maioresIdadeMasculino, nomeFilme);
 	printf("%d Mulheres maiores de idade assistiram ao filme %s.", maioresIdadeFeminino, nomeFilme);
 	printf("\n\n========================");	
 	
-	return 0; // retorno da funÁ„o
+	return 0; // retorno da fun√ß√£o
 }
