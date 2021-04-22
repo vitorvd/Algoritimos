@@ -9,6 +9,7 @@
 #include <stdlib.h> //lib: importar a função de limpar a tela
 #include <ctype.h> //lib: importar função toupper
 
+//inicío da função principal
 int main() {
 	setlocale(LC_ALL, "Portuguese"); //definição da linguagem global do programa
 	
@@ -159,12 +160,12 @@ int main() {
 					maioresIdadeFeminino++; //incrementa
 					break; // quebra o "switch"
 				default: // valor desconhecido
-					printf("** SEXO NÃO INFORMADO **");
+					printf("** SEXO NÃO INFORMADO **"); //exibe na tela do usuário
 			}
 		}
 	}
 	
-	// restante do relatório
+	// restante do relatório, função do printf: exibir na tela do usuário
 	printf("%d Homens maiores de idade assistiram ao filme %s.\n", maioresIdadeMasculino, nomeFilme);
 	printf("%d Mulheres maiores de idade assistiram ao filme %s.", maioresIdadeFeminino, nomeFilme);
 	printf("\n\n========================");	
