@@ -13,10 +13,10 @@ int main(){
 	do {
 
         do {	
-			printf("Informe o sexo, onde M = Masculino; F = Feminino: ");
-			scanf("%c", &sexo);
-			fflush(stdin);
-		} while((sexo != 'M') && (sexo != 'F'));
+		printf("Informe o sexo, onde M = Masculino; F = Feminino: ");
+		scanf("%c", &sexo);
+		fflush(stdin);
+	} while((sexo != 'M') && (sexo != 'F'));
         
         printf("Informe a cor dos olhos: ");
         scanf("%s", &corOlho);
@@ -35,7 +35,7 @@ int main(){
         	break;
 		}
 		
-		//validação de a idade informada é a maior, if ternário
+		//validaÃ§Ã£o de a idade informada Ã© a maior, if ternÃ¡rio
 		maiorIdade = idade >= maiorIdade ? idade : maiorIdade;
 		
 		if((sexo == 'F') && (idade >= 18) && (idade <= 35) && (strcmp(corOlho,"verdes") == 0) && (strcmp(corCabelo,"loiros") == 0))
@@ -49,8 +49,8 @@ int main(){
 	
 	porcentagemFeminina = ((float) habFeminina/(float) totalHabitantes) * 100;
 	
-	printf("\n\nA maior idade é: %d\n", maiorIdade);
-	printf("Porcentagem de mulheres com olhos verdes, cabelos loiros que estão entre 18 e 35 anos: %.2f\n\n", porcentagemFeminina);
+	printf("\n\nA maior idade Ã©: %d\n", maiorIdade);
+	printf("Porcentagem de mulheres com olhos verdes, cabelos loiros que estÃ£o entre 18 e 35 anos: %.2f\n\n", porcentagemFeminina);
 	
 	return 0;
 }
